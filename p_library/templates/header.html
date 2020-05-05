@@ -1,0 +1,26 @@
+ {% block content %}
+    {% load static %}
+    {% csrf_token %} 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    
+   <nav class="navbar navbar-default">
+     	<div class="container-fluid">
+   	 		<ul class="nav">
+                <li><a class="navbar-brand" href="/">На главную</a></li>
+	   	 		<li><a class="navbar-brand" href="/my_library">Моя библиотека</a></li>
+	   	 		<li><a class="navbar-brand" href="/authors">Авторы</a></li>
+		        <li><a class="navbar-brand" href="/author/create_many">Добавить авторов</a></li>
+		        <li><a class="navbar-brand" href="/author_book/create_many">Добавить авторов и книги</a></li>
+		        <li><a class="navbar-brand" href="/friend/create">Добавить должника</a></li>
+		        <li><a class="navbar-brand" href="/friends">Список должников</a></li>
+     		</ul>
+     	</div>
+    </nav>     
+{% endblock %}

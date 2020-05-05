@@ -1,0 +1,14 @@
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<title>Список авторов</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+	{% include "header.html "%}
+	<ul>
+		{% for author in object_list %}
+		    <li>{{ author.full_name }}</li>
+		{% endfor %}
+	</ul>
+</body>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% if username %}
+    <a href="/">На главную</a>
+        <h3>Привет, <b>{{ username }}</b>!
+            {% if github_url != '' %}
+            Я знаю твой профиль на <a href="{{ github_url }}">github</a>!
+            {% else %}
+            Я не знаю твой профиль на github!
+            {% endif %}
+        </h3>  
+        <p>Тут ты можешь <a href="/logout">выйти</a>.</p>
+        
+        
+        {% block lib %}
+        <nav class="navbar navbar-default">
+     	 <div class="container-fluid">
+   	 			 	
+	   	 	<ul class="nav">
+	   	 		<li><a class="navbar-brand" href="/my_library">Моя библиотека</a></li>
+	   	 		<li><a class="navbar-brand" href="/authors">Авторы</a></li>
+		        <li><a class="navbar-brand" href="/author/create_many">Добавить авторов</a></li>
+		        <li><a class="navbar-brand" href="/author_book/create_many">Добавить авторов и книги</a></li>
+		        <li><a class="navbar-brand" href="/friend/create">Добавить должника</a></li>
+		        <li><a class="navbar-brand" href="/friends">Список должников</a></li>
+
+     		</ul>
+     	</div>
+	   
+	  </nav>
+        {% endblock %}
+    {% else %}  
+        <p>Тебе нужно <a href="/register">зарегистрироваться</a> или <a href="/login">войти на сайт</a>!</p>  
+    {% endif %}
+
+{% endblock %}

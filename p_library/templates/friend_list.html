@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Список Друзей-должников книг</title>
+</head>
+<body>
+	{% include "header.html" %} 
+	<ul>
+		{% for friend in object_list %}
+		    <li>{{ friend.friend_name }} взял книгу {{ friend.friend_book }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
